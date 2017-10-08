@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+
+    "name": "AutoGrades",
+    "description": "Calculates grades not yet put in.",
+    "version": "1.0",
+    
+    "content_scripts": [
+	{
+	    "run_at": "document_end",
+	    "all_frames": true,
+	    "matches": [
+		"https://blackboard.learn.fresnostate.edu/webapps/bb-social-learning-BBLEARN/execute/mybb?cmd=display&toolId=MyGradesOnMyBb_____MyGradesTool&extraParams=override_stream=mygrades"
+	    ],
+	    "js": ["content.js"]
+	}
+    ]
+}
